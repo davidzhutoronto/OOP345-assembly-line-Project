@@ -1,3 +1,0 @@
-﻿  LineManager.cpp
-C:\Users\Link Study\Desktop\MS3\LineManager.cpp(131,4): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  MS3.vcxproj -> C:\Users\Link Study\Desktop\MS3\x64\Debug\MS3.exe
