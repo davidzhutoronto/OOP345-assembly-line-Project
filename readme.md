@@ -404,7 +404,7 @@ The `Workstation` class includes the following additional information:
 
 - `void setNextStation(Workstation* station)` – this modifier stores the address of the referenced `Workstation` object in the pointer to the `m_pNextStation`. Parameter defaults to `nullptr`.
 
-- `const Workstation* getNextStation() const` – this query returns the address of next `Workstation`
+- `Workstation* getNextStation() const` – this query returns the address of next `Workstation`
 
 - `void display(std::ostream& os) const` – this query inserts the name of the `Item` for which the current object is responsible into stream `os` following the format: `ITEM_NAME --> NEXT_ITEM_NAME`
     - if the current object is the last `Workstation` (`m_pNextWorkstation` is `nullptr`) this query inserts: `ITEM_NAME --> END OF LINE`.
@@ -441,9 +441,8 @@ The `LineManager` class manages an assembly line of active stations and contains
     - if the `pending` queue has a `CustomerOrder` object, moves the order at the front of the queue to the `m_firstStation` of the `activeLine` and remove it from the queue. This function moves only one order to the line on a single iteration.
     - for each station on the line, executes one fill operation
     - for each station on the line, attempts to move a `CustomerOrder` down the line
-    - moves each order in the `m_endOfLine` workstation to the `completed` or `incomplete` container
     - return `true` if all customer orders (`m_cntCustomerOrder`) have been filled, otherwise returns `false`.
-- `void display() const` -- this query displays all active stations on the assembly line in their current order
+- `void display(std::ostream& os) const` -- this query displays all active stations on the assembly line in their current order
 
 
 ## Tester Module
