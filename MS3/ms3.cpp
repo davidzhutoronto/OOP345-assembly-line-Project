@@ -3,7 +3,9 @@
 // ms3_prof.cpp
 // Winter 2021
 // Chris Szalwinski
+// 
 
+//Arguments: Stations1.txt Stations2.txt CustomerOrders.txt AssemblyLine.txt
 #include <iostream>
 #include <fstream>
 #include <string>
